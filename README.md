@@ -39,8 +39,8 @@ Your configuration file: `src/main/resources/application.properties`
 ```properties
 spring.application.name=springbootjdbc
 spring.datasource.url=jdbc:mysql://localhost:3306/springbootjdbc
-spring.datasource.username=root
-spring.datasource.password=SA112358*
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 spring.jpa.hibernate.ddl-auto=update
