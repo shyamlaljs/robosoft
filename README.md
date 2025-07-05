@@ -45,3 +45,102 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+
+🚀 Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/student-management-system.git
+cd student-management-system
+2. Create the MySQL Database
+sql
+Copy
+Edit
+CREATE DATABASE springbootjdbc;
+3. Build and Run the Application
+bash
+Copy
+Edit
+./mvnw spring-boot:run
+📡 API Endpoints
+Method	Endpoint	Description
+GET	/students	Fetch all students
+GET	/students/{id}	Get student by ID
+POST	/students	Add a new student
+PUT	/students/{id}	Update student by ID
+DELETE	/students/{id}	Delete student by ID
+
+🧾 Sample JSON Payload
+POST /students
+json
+Copy
+Edit
+{
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "course": "Computer Science"
+}
+PUT /students/{id}
+json
+Copy
+Edit
+{
+  "name": "Alice Johnson",
+  "email": "alice.j@example.com",
+  "course": "AI & ML"
+}
+📁 Project Structure
+bash
+Copy
+Edit
+student-management-system/
+│
+├── src/main/java/com/example/student/
+│   ├── controller/         # REST Controllers
+│   ├── service/            # Business logic
+│   ├── repository/         # JPA Repositories
+│   ├── model/              # Student entity
+│   └── SpringbootjdbcApplication.java
+│
+├── src/main/resources/
+│   ├── application.properties
+│
+├── pom.xml
+└── README.md
+🔧 Dependencies (Maven)
+Sample from pom.xml:
+
+xml
+Copy
+Edit
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+    </dependency>
+</dependencies>
+
+🤝 Contributing
+Feel free to fork this repository and submit pull requests or issues. Contributions are welcome!
+
+
+
